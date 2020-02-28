@@ -102,6 +102,10 @@ public class GarageUI{
                     pressKeyToReturnToMenu();
 
                     continue;
+                } else{
+                    System.out.println("Invalid option.");
+                    pressKeyToReturnToMenu();
+                    continue;
                 }
             } else if (option == 2){
 
