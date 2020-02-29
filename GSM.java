@@ -1,47 +1,58 @@
+/**
+ * @author Dahalia Howell
+ * @version 1.0
+ */
+
 package garage;
 
 import java.util.*;
 
 public class GSM{
+
     ArrayList<Vehicle>vehicleList = new ArrayList<Vehicle>();
     private String garageName;
 
+    /**
+     * Constructor of GSM class
+     * @param garageName
+     */
     public GSM(String garageName){
         this.garageName = garageName;
     }
 
-    /*public void addVehicle(String name, String teleNum, String chassisNo,
-                            String color, int estimate, int year){
-        Vehicle vehicle = new Vehicle(name, teleNum, chassisNo, color, estimate, year);
+    /**
+     * This method adds vehicle to vehicleList.
+     * @param vehicle
+     * @return Nothing.
+     */
+    public void addVehicle(Vehicle vehicle){
         this.vehicleList.add(vehicle);
-    }*/
-
-    public void addCar(String name, String teleNum, String chassisNo,
-                        String color, int estimate, int year, 
-                        String body, String type, int ccRating){
-        Car car = new Car(name, teleNum, chassisNo, color, estimate, year, body, type, ccRating);
-        this.vehicleList.add(car);
     }
 
-    public void addTruck(String name, String teleNum, String chassisNo,
-                        String color, int estimate, int year, int wheelNo, 
-                        TruckType classification){
-        Truck truck = new Truck(name, teleNum, chassisNo, color, estimate, year, wheelNo, classification);
-        this.vehicleList.add(truck);
-    }
-
+    /**
+     * This method converts the arraylist of vehicles to an array.
+     * @return array of vehicles.
+     */
     public Object getVehicles(){
         Object[] vehicle = vehicleList.toArray();
         return vehicle;
     }
 
+    /**
+     * Setter Method - updates the name of the garage.
+     * @return Nothing.
+     */
     public void updateGarageName(String name){
         this.garageName = name;
     }
 
+    /**
+     * This method creates a string representation of a gsm object.
+     * @return String This returns the string representation of a gsm object.
+     */
     public String toString(){
         String result;
-        result = this.garageName + "\n";
+        result = "\n" + this.garageName + "\n\n";
 
         for (Vehicle vehicle:vehicleList){
             result += vehicle.toString() + "\n\n";

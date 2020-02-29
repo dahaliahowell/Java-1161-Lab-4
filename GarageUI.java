@@ -1,10 +1,17 @@
+/**
+ * @author Dahalia Howell
+ * @version 1.0
+ */
+
 package garage;
 
-//import java.util.*;
 import java.util.Scanner;
 
 public class GarageUI{
 
+    /**
+     * This method allows to user to press the enter key to return to the menu.
+     */
     private static void pressKeyToReturnToMenu() {
         System.out.println("Press Enter key to return to the menu...");
         try {
@@ -12,7 +19,12 @@ public class GarageUI{
         } catch (Exception e) {}
     }
 
+    /**
+     * Main Method - entry point of Java program
+     * @param args unused
+     */
     public static void main(String[] args) {
+
         GSM gsm = new GSM("COMP1161GARAGE");
 
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +44,7 @@ public class GarageUI{
             int option = scanner.nextInt();
 
             if (option == 1) {
+
                 scanner.nextLine();
                 System.out.println("Enter vehicle (Car/Truck): ");
                 String vehicle = scanner.nextLine();
@@ -56,6 +69,7 @@ public class GarageUI{
                     System.out.print("Enter year of manufacture: ");
                     int year = scanner.nextInt();
                     scanner.nextLine();
+
                     System.out.print("Enter body: ");
                     String body = scanner.nextLine();
 
@@ -65,14 +79,16 @@ public class GarageUI{
                     System.out.print("Enter CC rating: ");
                     int ccRating = scanner.nextInt();
 
-                    gsm.addCar(name, teleNum, chassisNo, color, estimate, year, body, type, ccRating);
+                    Car car = new Car(name, teleNum, chassisNo, color, estimate, year, body, type, ccRating);
+
+                    gsm.addVehicle(car);
 
                     pressKeyToReturnToMenu();
 
                     continue;
 
-
                 } else if (vehicle.equalsIgnoreCase("truck")){
+
                     System.out.print("Enter owner's name: ");
                     String name = scanner.nextLine();
 
@@ -94,19 +110,26 @@ public class GarageUI{
                     System.out.print("Enter number of wheels: ");
                     int wheelNo = scanner.nextInt();
                     scanner.nextLine();
+
                     System.out.print("Enter classification: ");
                     String classification= scanner.nextLine();
                     
-                    gsm.addTruck(name, teleNum, chassisNo, color, estimate, year, wheelNo, TruckType.valueOf(classification));
+                    Truck truck = new Truck(name, teleNum, chassisNo, color, estimate, year, wheelNo, TruckType.valueOf(classification));
+
+                    gsm.addVehicle(truck);
 
                     pressKeyToReturnToMenu();
 
                     continue;
+
                 } else{
+
                     System.out.println("Invalid option.");
                     pressKeyToReturnToMenu();
                     continue;
+
                 }
+
             } else if (option == 2){
 
                 System.out.println(gsm.toString());
@@ -116,6 +139,7 @@ public class GarageUI{
                 continue;
 
             } else if (option == 3){
+
                 scanner.nextLine();
                 System.out.print("Enter new garage name: ");
                 String name = scanner.nextLine();
@@ -127,10 +151,12 @@ public class GarageUI{
                 continue;
 
             } else if (option == 4){
+
                 scanner.close();
                 break;
 
             } else{
+
                 System.out.println("Invalid option.");
 
                 pressKeyToReturnToMenu();
