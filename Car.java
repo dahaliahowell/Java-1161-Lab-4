@@ -1,9 +1,10 @@
+package garage;
+
 /**
+ * The Car class represents a car which is a type of vehicle.
  * @author Dahalia Howell
  * @version 1.0
  */
-
-package garage;
 public class Car extends Vehicle{
 
     private String body;
@@ -11,7 +12,7 @@ public class Car extends Vehicle{
     private int ccRating;
 
     /**
-     * Constructor of Car Class
+     * Constructor of Car Class - Creates a new car with the given parameters.
      * @param name
      * @param teleNum
      * @param chassisNo
@@ -32,7 +33,7 @@ public class Car extends Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the body of a car.
      * @return String This returns the body of a car.
      */
     public String getBody(){
@@ -40,7 +41,7 @@ public class Car extends Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the type of a car.
      * @return String This returns the type of a car.
      */
     public String getType(){
@@ -48,7 +49,7 @@ public class Car extends Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the cc rating of a car.
      * @return int This returns the cc rating of a car.
      */
     public int getCCRating(){
@@ -56,7 +57,7 @@ public class Car extends Vehicle{
     }
 
     /**
-     * This method calculates the service charge of a car
+     * This method calculates the service charge of a car.
      * @return double This returns a car's service charge.
      */
     public double serviceCharge(){
@@ -66,7 +67,7 @@ public class Car extends Vehicle{
     /**
      * This method adds an additional charge to the regular service charge.
      * @param othercharge
-     * @return double This returns the sum of the additional charge and the regualr service charge.
+     * @return double This returns the sum of the additional charge and the regular service charge.
      */
     public double serviceCharge(int othercharge){
         return this.serviceCharge() + othercharge;

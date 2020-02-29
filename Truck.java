@@ -1,16 +1,16 @@
+package garage;
+
 /**
+ * The Truck class represents a truck which is a type of vehicle.
  * @author Dahalia Howell
  * @version 1.0
  */
-
-package garage;
-
 public class Truck extends Vehicle{
     private int wheelNo;
     private TruckType classification;
 
     /**
-     * Constructor of truck class
+     * Constructor of truck class - Creates a new truck with the given parameters.
      * @param name
      * @param teleNum
      * @param chassisNo
@@ -29,7 +29,7 @@ public class Truck extends Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the number of wheels that a truck has.
      * @return int This returns the number of wheels that a truck has. 
      */
     public int getWheelNo(){
@@ -37,7 +37,7 @@ public class Truck extends Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the classification of a truck.
      * @return TruckType This returns the classification of a truck.
      */
     public TruckType getClassification(){

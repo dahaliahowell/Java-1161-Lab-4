@@ -1,17 +1,17 @@
+package garage;
+
 /**
+ * The Owner class represents an owner.
  * @author Dahalia Howell
  * @version 1.0
  */
-
-package garage;
-
 public class Owner{
 
     private String name;
     private String teleNum;
 
     /**
-     * Constructor of Owner class
+     * Constructor of Owner class - Creates a new owner with the given parameters.
      * @param name
      * @param teleNum
      */
@@ -21,7 +21,7 @@ public class Owner{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the name of an owner.
      * @return String This returns the name of an owner.
      */
     public String getOwnerName(){
@@ -29,7 +29,7 @@ public class Owner{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the telephone number of an owner.
      * @return String This return the telephone number of an owner.
      */
     public String getTelephoneNum(){

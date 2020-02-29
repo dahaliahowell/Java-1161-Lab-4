@@ -1,19 +1,19 @@
-/**
- * @author Dahalia Howell
- * @version 1.0
- */
-
 package garage;
 
 import java.util.*;
 
+/**
+ * The GSM class represents a Garage Managements System (GSM).
+ * @author Dahalia Howell
+ * @version 1.0
+ */
 public class GSM{
 
     ArrayList<Vehicle>vehicleList = new ArrayList<Vehicle>();
     private String garageName;
 
     /**
-     * Constructor of GSM class
+     * Constructor of GSM class - Creates a new GSM with a given name.
      * @param garageName
      */
     public GSM(String garageName){

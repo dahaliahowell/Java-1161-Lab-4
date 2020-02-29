@@ -1,12 +1,13 @@
-/**
- * @author Dahalia Howell
- * @version 1.0
- */
-
 package garage;
 
 import java.util.Scanner;
 
+/**
+ * The GarageUI program implements a user interface application that allows a user to add a vehicle,
+ * displays the contents of the garage and update the garage's name. 
+ * @author Dahalia Howell
+ * @version 1.0
+ */
 public class GarageUI{
 
     /**
@@ -42,6 +43,7 @@ public class GarageUI{
             System.out.println(menu);
             System.out.println("Select an option by entering its corresponding number.");
             int option = scanner.nextInt();
+            System.out.println();
 
             if (option == 1) {
 
@@ -128,7 +130,7 @@ public class GarageUI{
 
                 } else{
 
-                    System.out.println("Invalid option.");
+                    System.out.println("Invalid option.\n");
                     pressKeyToReturnToMenu();
                     continue;
 
@@ -136,7 +138,11 @@ public class GarageUI{
 
             } else if (option == 2){
 
-                System.out.println(gsm.toString());
+                if (gsm.vehicleList.isEmpty()){
+                    System.out.println("Garage is empty.\n");
+                } else{
+                     System.out.println(gsm.toString());
+                }
 
                 pressKeyToReturnToMenu();
 
@@ -145,7 +151,7 @@ public class GarageUI{
             } else if (option == 3){
 
                 scanner.nextLine();
-                System.out.print("Enter new garage name: \n");
+                System.out.print("Enter new garage name: ");
                 String name = scanner.nextLine();
 
                 System.out.println("\nThe garage name was successfully changed.\n");
@@ -159,12 +165,12 @@ public class GarageUI{
             } else if (option == 4){
 
                 scanner.close();
-                System.out.println("Exiting program...");
+                System.out.println("Exiting program...\n");
                 break;
 
             } else{
 
-                System.out.println("Invalid option.");
+                System.out.println("Invalid option.\n");
 
                 pressKeyToReturnToMenu();
 

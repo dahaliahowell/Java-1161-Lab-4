@@ -1,12 +1,9 @@
-/**
- * @author Dahalia Howell
- * @version 1.0
- */
-
 package garage;
 
 /**
- * Enumerated type
+ * This is an enumerated type that represents the classifications of truck.
+ * @author Dahalia Howell
+ * @version 1.0
  */
 public enum TruckType{
     LIGHT,

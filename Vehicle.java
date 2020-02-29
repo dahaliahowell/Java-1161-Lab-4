@@ -1,12 +1,12 @@
-/**
- * @author Dahalia Howell
- * @version 1.0
- */
-
 package garage;
 
 import java.text.DecimalFormat;
 
+/**
+ * The Vehicle class represents a vehicle.
+ * @author Dahalia Howell
+ * @version 1.0
+ */
 public class Vehicle{
     private Owner owner;
     private String chassisNo;
@@ -16,7 +16,7 @@ public class Vehicle{
     private static DecimalFormat df = new DecimalFormat("0.00");
 
     /**
-     * Constructor of vehicle class
+     * Constructor of vehicle class - Creates a new owner with the given parameters.
      * @param name
      * @param teleNum
      * @param chassisNo
@@ -34,7 +34,7 @@ public class Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the chassis number of a vehicle.
      * @return String This returns the chassis number of a vehicle.
      */
     public String getChassisNo(){
@@ -42,7 +42,7 @@ public class Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the color of a vehicle.
      * @return String This returns the color of a vehicle.
      */
     public String getColor(){
@@ -50,7 +50,7 @@ public class Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to the estimate of a vehicle.
      * @return int This the returns the estimate of a vehicle.
      */
     public int get_Estimate(){
@@ -58,7 +58,7 @@ public class Vehicle{
     }
 
     /**
-     * Getter Method
+     * Getter Method - Provides access to a vehicle's year of maufacture.
      * @return int This returns a vehicle's year of manufacture.
      */
     public int getYear(){
