@@ -83,6 +83,8 @@ public class GarageUI{
 
                     gsm.addVehicle(car);
 
+                    System.out.println("\n\nThe car was successfully added to the garage.\n\n");
+
                     pressKeyToReturnToMenu();
 
                     continue;
@@ -118,6 +120,8 @@ public class GarageUI{
 
                     gsm.addVehicle(truck);
 
+                    System.out.println("\n\nThe truck was successfully added to the garage.\n\n");
+
                     pressKeyToReturnToMenu();
 
                     continue;
@@ -141,8 +145,10 @@ public class GarageUI{
             } else if (option == 3){
 
                 scanner.nextLine();
-                System.out.print("Enter new garage name: ");
+                System.out.print("Enter new garage name: \n");
                 String name = scanner.nextLine();
+
+                System.out.println("\nThe garage name was successfully changed.\n");
 
                 gsm.updateGarageName(name);
 
@@ -153,6 +159,7 @@ public class GarageUI{
             } else if (option == 4){
 
                 scanner.close();
+                System.out.println("Exiting program...");
                 break;
 
             } else{
